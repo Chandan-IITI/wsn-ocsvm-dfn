@@ -25,7 +25,7 @@ ocsvmModel=svmtrain(trainLabel,trainData,options);
 
 save ocsvm_model ocsvmModel normParam;
 
-%%
+%% Threshold Adjustment
 clear all;close all;clc;
 load ocsvm_model;
 testData=repmat(normParam.min-10,1e6,1)+...
@@ -55,7 +55,7 @@ boundaryData2=testData(abs(decValues+2e-2)<=1e-4,:);
 boundaryData3=testData(abs(decValues+3e-2)<=1e-4,:);
 save data_2d supportVector trainData boundaryData0 boundaryData1 boundaryData2 boundaryData3;
 
-%%
+%% Time Validation
 clear all;close all;clc;
 load ocsvm_model;
 ocsvmModel.rho=ocsvmModel.rho-2e-2;
