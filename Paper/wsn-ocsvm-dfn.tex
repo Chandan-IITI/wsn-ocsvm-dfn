@@ -1,0 +1,166 @@
+\documentclass[conference]{IEEEtran}
+
+% *** GRAPHICS RELATED PACKAGES ***
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% *** MATH PACKAGES ***
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{amsthm}
+
+% *** SPECIALIZED LIST PACKAGES ***
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% *** ALIGNMENT PACKAGES ***
+\usepackage{array}
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+\usepackage{url}
+
+% *** TABLES PACKAGES ***
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+% *** USER DEFINITION ***
+\newtheoremstyle{problemstyle} % <name>
+        {3pt}                  % <space above>
+        {3pt}                  % <space below>
+        {\normalfont}          % <body font>
+        {}                     % <indent amount}
+        {\bfseries}            % <theorem head font>
+        {\normalfont:}         % <punctuation after theorem head>
+        {.5em}                 % <space after theorem head>
+        {}                     % <theorem head spec (can be left empty, meaning `normal')>
+\theoremstyle{problemstyle}
+
+\newtheorem{Remark}{\bf Remark}
+
+\begin{document}
+
+\title{Data Driven Hyperparameters Optimization of One-Class Support Vector Machines for Anomaly Detection in Wireless Sensor Networks}
+
+\author{\IEEEauthorblockN{Van Vuong~Trinh and Kim Phuc~Tran}
+\IEEEauthorblockA{Division of Artificial Intelligence,\\Faculty of Information Technology,\\ Dong A University, Danang, Vietnam\\Email: vanvuong.trinh@gmail.com, phuctk@donga.edu.vn}
+\and
+\IEEEauthorblockN{Thu Huong~Truong}
+\IEEEauthorblockA{Department of Telecommunication Systems,\\School of Electronics and Telecommunications,\\Hanoi University of Science and Technology, Hanoi, Vietnam\\Email: huong.truongthu@hust.edu.vn}}
+
+\maketitle
+
+\begin{abstract}
+One-class support vector machines (OCSVM) have been recently applied to detect anomalies in wireless sensor networks (WSNs). Typically, OCSVM is kernelized by radial bais functions (RBF, or Gausian kernel) whereas selecting hyperparameters is based upon availability of labelled anomalous, which is rarely applicable in practice. This article investigates the application of OCSVM with data-driven hyperparameters optimization. Specifically, a kernel distance based optimization criteria is used instead of labelled data based metrics such as geometric mean accuracy (g-mean) or area under the receiver operating characteristic (AUROC). The efficiency of this method is illustrated over a real data set. 
+\end{abstract}
+
+\begin{IEEEkeywords}
+one-class support vector machines,  anomaly detection, wireless sensor networks, Gaussian kernel, parameters selection.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+
+\section{One-Class Support Vector Machines and Preliminaries}\label{sec:OCSVM}
+
+In this section, we briefly recall one-class support vector machines (OCSVM) \cite{scholkopf2001estimating}.
+
+\subsection{Theory}
+
+Given $N$ samples $\mathbf{x}_k$, $k=1,\dots,N$, SVDD method aims to estimate a sphere with minimum volume that contains all (or most of) these data. It is also assummed that almost these training samples belong to an unknown distribution. Let $\mathbf{a}$ and $R$ being reserved for the center and the radius of the sphere, we define the objective function to minimize the volume of the sphere and the number of outliers as:
+\begin{align}
+R^2 + C \sum_{k=1}^N \xi_k
+\end{align}
+where $C > 0$ is a regularization parameter with constraints that almost data points are within the sphere:
+\begin{align}
+\left|\left| \mathbf{x}_k - \mathbf{a} \right|\right|^2 \le R^2 + \xi_k \text{, } \xi_k \ge 0 \quad \forall k
+\end{align}
+
+To adapt with nonspherical distribution, a conventional approach is to map given data into a higher dimensional feature space, then learning a sphere in such a new space. This results into the so-called \emph{primal optimisation} as follows:
+\begin{subequations}\label{eq:svm_primal}
+\begin{align}
+\underset{
+	\begin{array}{c}
+		 R, \mathbf{a}, \xi
+	\end{array}}{\text{Minimize }} &R^2 + C \sum_{k=1}^N \xi_k \\
+\text{Subject to } &\left|\left| \phi \left( \mathbf{x}_k \right) - \mathbf{a}  \right|\right|^2 \le R^2 + \xi_k \text{, } \xi_k \ge 0 \quad \forall k
+\end{align}
+\end{subequations}
+where $\phi \left( \cdot \right)$ is the aforementioned feature mapping. The Lagrangian is hereafter written as:
+\begin{align}
+\mathcal{L} &= R^2 + C \sum_{k=1}^N \xi_k \nonumber \\&- \sum_{k=1}^N \alpha_k \bigg[ R^2 + \xi_k - \left|\left| \phi \left( \mathbf{x}_k \right) - \mathbf{a} \right|\right|^2 \bigg] - \sum_{k=1}^N \gamma_k \xi_k \label{eq:svm_lagrange_init}
+\end{align}
+with the Lagrange multipliers $\alpha_k, \gamma_k \ge 0$. $\mathcal{L}$ should be minimized w.r.t. $R, \mathbf{a}, \xi_k$ and maximized w.r.t. $\alpha_k, \gamma_k$.
+
+Setting partial derivatives w.r.t. $R, a, \xi$ gives:
+\begin{subequations}
+\begin{align}
+\dfrac{\partial \mathcal{L}}{\partial R} = 0 &: \quad \sum_{k=1}^N \alpha_k = 1 \label{eq:svm_lagrange_dLdR} \\
+\dfrac{\partial \mathcal{L}}{\partial \mathbf{a}} = 0 &: \quad \mathbf{a} = \sum_{k=1}^N \alpha_k \phi \left( \mathbf{x}_k \right) \label{eq:svm_lagrange_dLda} \\
+\dfrac{\partial \mathcal{L}}{\partial \xi_k} = 0 &: \quad \alpha_k + \gamma_k = C \quad \forall k \label{eq:svm_lagrange_dLdxi}
+\end{align}
+\end{subequations}
+Obviously, Lagrange multipliers $\gamma_k$ can be eliminated by imposing bound constraints on $\alpha_k$ as:
+\begin{align}
+0\le \alpha_k \le C \quad \forall k
+\end{align}
+Substituting \eqref{eq:svm_lagrange_dLdR}-\eqref{eq:svm_lagrange_dLdxi} into \eqref{eq:svm_lagrange_init} leads to the following \emph{dual optimisation}:
+\begin{subequations}\label{eq:svm_dual}
+\begin{align}
+\underset{
+	\begin{array}{c}
+		 \alpha
+	\end{array}}{\text{Maximize }} &\sum_{k=1}^N \alpha_k \left( \phi \left( \mathbf{x}_k \right) \cdot \phi \left( \mathbf{x}_k \right) \right) \nonumber \\&- \sum_{k=1}^N \sum_{l=1}^N \alpha_k \alpha_l \left( \phi \left( \mathbf{x}_k \right) \cdot \phi \left( \mathbf{x}_l \right) \right) \\
+\text{Subject to } &\sum_{k=1}^N \alpha_k = 1 \text{, } 0 \le \alpha_k \le C \quad \forall k
+\end{align}
+\end{subequations}
+
+\begin{subequations}
+\begin{align}
+&\left|\left| \phi \left( \mathbf{x}_k \right) - \mathbf{a} \right|\right|^2 < R^2 \to \alpha_k = 0 \\
+&\left|\left| \phi \left( \mathbf{x}_k \right) - \mathbf{a} \right|\right|^2 = R^2 \to 0 < \alpha_k < C \label{eq:sv_alpha}\\
+&\left|\left| \phi \left( \mathbf{x}_k \right) - \mathbf{a} \right|\right|^2 > R^2 \to \alpha_k = C
+\end{align}
+\end{subequations}
+
+\subsection{Kernelization}
+
+Instead of using inner product, an alternative kernel product can also be adopted:
+\begin{align}
+\kappa \left( \mathbf{x}_k, \mathbf{x}_l \right) = \phi \left( \mathbf{x}_k \right) \cdot \phi \left( \mathbf{x}_l \right)
+\end{align}
+This is the known \emph{kernel trick} \cite{Scholkopf2001}, aims to avoid the need of explicitly declaring a feature mapping $\phi \left( \cdot \right)$. 
+
+\begin{align}
+\kappa \left( \mathbf{x}_k, \mathbf{x}_l \right) = \exp \left( -\dfrac{ \left( \mathbf{x}_k - \mathbf{x}_l \right)'\left( \mathbf{x}_k - \mathbf{x}_l \right) }{2\sigma} \right)
+\end{align}
+where parameter $\sigma$ is the kernel width. 
+
+\begin{subequations}\label{eq:svm_dual_kernel}
+\begin{align}
+\underset{
+	\begin{array}{c}
+		 \alpha
+	\end{array}}{\text{Maximize }} &\sum_{k=1}^N \alpha_k \kappa \left( \mathbf{x}_k, \mathbf{x}_k \right)  - \sum_{k=1}^N \sum_{l=1}^N \alpha_k \alpha_l \kappa \left( \mathbf{x}_k, \mathbf{x}_l \right)  \\
+\text{Subject to } &\sum_{k=1}^N \alpha_k = 1 \text{, } 0 \le \alpha_k \le C \quad \forall k
+\end{align}
+\end{subequations}
+
+\section{Description of Anomaly Detection Procedure for WSNs}
+
+
+
+\section{Illustrative Example}\label{sec:Illustrative}
+
+This section investigates the efficiency of anomaly detection algorithm over a real data set. The source code is freely available at \url{https://github.com/trinhvv/wsn-ocsvm-dfn}. All computation was performed on a platform with 2.6 GHz Intel(R) Core(TM) i7 and 16GB of RAM.
+
+\bibliographystyle{IEEEtran}
+\bibliography{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
+
+\end{document}
+
+
