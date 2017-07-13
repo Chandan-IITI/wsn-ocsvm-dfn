@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  10 JUL 2017 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  13 JUL 2017 23:48
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -873,21 +873,72 @@ your preamble.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 74.
+
+LaTeX Warning: Citation `scholkopf2000support' on page 1 undefined on input lin
+e 70.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 74.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \vbox (badness 1635) has occurred while \output is active []
+Overfull \hbox (49.116pt too wide) in paragraph at lines 86--86
+[] 
+ []
 
- [1{D:/Users/trinhvv-admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+
+ []
+
+
+Overfull \hbox (80.29637pt too wide) detected at line 105
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 w\OML/cmm/m/it/10 ; \OML/cm
+m/b/it/10 \OML/cmm/m/it/10 ; \OML/cmm/b/it/10 \OML/cmm/m/it/10 ; \OML/cmm/b/i
+t/10 \OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ) = [] [][] + [] [] \OML/cmm/m/it/10 
+[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10  \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/1
+0 []\OT1/cmr/m/n/10 ((\OT1/cmr/bx/n/10 w\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 (\O
+T1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10  \OT1
+/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/
+cmm/m/it/10 [][]:
+ []
+
+
+Overfull \hbox (23.73773pt too wide) in alignment at lines 107--114
+ [][][] []
+ []
+
+[1{D:/Users/trinhvv-admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+<Figs/ibrl_wsn.png, id=19, 903.375pt x 468.75125pt>
+File: Figs/ibrl_wsn.png Graphic file (type png)
+ <use Figs/ibrl_wsn.png>
+Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 154.
+(pdftex.def)             Requested size: 225.8432pt x 117.18752pt.
+
+<Python/data_description.pdf, id=20, 408.71112pt x 224.9357pt>
+File: Python/data_description.pdf Graphic file (type pdf)
+
+<use Python/data_description.pdf>
+Package pdftex.def Info: Python/data_description.pdf used on input line 161.
+(pdftex.def)             Requested size: 245.22856pt x 134.96245pt.
+
+<Python/time_validation.pdf, id=21, 627.9051pt x 917.3943pt>
+File: Python/time_validation.pdf Graphic file (type pdf)
+
+<use Python/time_validation.pdf>
+Package pdftex.def Info: Python/time_validation.pdf used on input line 179.
+(pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
+
+
+LaTeX Warning: Float too large for page by 3.77167pt on input line 182.
+
 (wsn-ocsvm-dfn.bbl)
 
 ** Conference Paper **
@@ -900,32 +951,36 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[2 <./Figs/ibrl_wsn.png (PNG copy)> <./Python/data_description.pdf>] [3 <./Pyth
+on/time_validation.pdf>] (wsn-ocsvm-dfn.aux)
 
-] (wsn-ocsvm-dfn.aux) ) 
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 24728 strings out of 493335
- 621631 string characters out of 3139236
- 778717 words of memory out of 10000000
- 27831 multiletter control sequences out of 15000+200000
- 38599 words of font info for 80 fonts, out of 3000000 for 9000
+ 24795 strings out of 493335
+ 622559 string characters out of 3139236
+ 776717 words of memory out of 10000000
+ 27879 multiletter control sequences out of 15000+200000
+ 43519 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,15n,96p,730b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
-.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (2 pages, 136802 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wsn-ocsvm-dfn.pdf (3 pages, 702984 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 195 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

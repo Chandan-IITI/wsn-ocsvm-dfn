@@ -26,8 +26,9 @@ B.~Sch{\"o}lkopf, J.~C. Platt, J.~Shawe-Taylor, A.~J. Smola, and R.~C.
   Williamson, ``Estimating the support of a high-dimensional distribution,''
   \emph{Neural computation}, vol.~13, no.~7, pp. 1443--1471, 2001.
 
-\bibitem{Scholkopf2001}
-B.~Scholkopf, ``{The kernel trick for distances},'' \emph{Advances in Neural
-  Information Processing Systems 13}, vol.~13, pp. 301--307, 2001.
+\bibitem{Buonadonna2005}
+P.~Buonadonna, D.~Gay, J.~M. Hellerstein, W.~Hong, and S.~Madden, ``{TASK:
+  Sensor network in a box},'' \emph{Proceedings of the Second European Workshop
+  on Wireless Sensor Networks, EWSN 2005}, vol. 2005, pp. 133--144, 2005.
 
 \end{thebibliography}
