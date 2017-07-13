@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  13 JUL 2017 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  14 JUL 2017 00:00
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -933,11 +933,11 @@ Package pdftex.def Info: Python/data_description.pdf used on input line 161.
 File: Python/time_validation.pdf Graphic file (type pdf)
 
 <use Python/time_validation.pdf>
-Package pdftex.def Info: Python/time_validation.pdf used on input line 179.
+Package pdftex.def Info: Python/time_validation.pdf used on input line 180.
 (pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
 
 
-LaTeX Warning: Float too large for page by 3.77167pt on input line 182.
+LaTeX Warning: Float too large for page by 3.77167pt on input line 183.
 
 (wsn-ocsvm-dfn.bbl)
 
@@ -960,7 +960,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  24795 strings out of 493335
  622559 string characters out of 3139236
- 776717 words of memory out of 10000000
+ 776711 words of memory out of 10000000
  27879 multiletter control sequences out of 15000+200000
  43519 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -978,7 +978,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (3 pages, 702984 bytes).
+Output written on wsn-ocsvm-dfn.pdf (3 pages, 702961 bytes).
 PDF statistics:
  195 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
