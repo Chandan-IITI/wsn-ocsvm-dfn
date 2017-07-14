@@ -3,7 +3,7 @@
 \citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {II}One-Class Support Vector Machines and Preliminaries}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}One-Class Support Vector Machines and Gaussian Kernel}{1}}
 \newlabel{sec:OCSVM}{{II}{1}}
 \newlabel{euq:ocsvm}{{1}{1}}
 \newlabel{euq:constraints}{{1b}{1}}
@@ -15,24 +15,32 @@
 \newlabel{equ:defosvmker}{{8}{1}}
 \newlabel{equ:lagrangianalpha}{{9}{1}}
 \citation{scholkopf2001estimating}
+\citation{Xiao2014}
 \citation{Buonadonna2005}
 \citation{Buonadonna2005}
-\bibstyle{IEEEtran}
-\bibdata{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
-\bibcite{scholkopf2001estimating}{1}
-\bibcite{Buonadonna2005}{2}
+\citation{Buonadonna2005}
 \newlabel{euq:ocsvmker}{{10}{2}}
 \newlabel{equ:rho}{{11}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Description of Anomaly Detection Procedure for WSNs}{2}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces (Anomaly detection procedure) Assume a training set $\{\mathbf  {x}_k^{train}\}_k$, a threshold $\delta $ and kernel $\kappa (\cdot ,\cdot )$ are given. This algorithm produces the decision function $f(\cdot )$ defined by the constant $D$, the support vectors $\mathbf  {x}_i$ and corresponding Lagrange mutipliers $\alpha _i$.\relax }}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Illustrative Example}{2}}
 \newlabel{sec:Illustrative}{{IV}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Data description}{2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A map of sensors' location. (Source: \cite  {Buonadonna2005})\relax }}{2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:sensor_map}{{1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Discrimination boundaries with some $\delta $'s values. \relax }}{2}}
-\newlabel{fig:domain_boundary}{{2}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces DR and FPR versus $\delta $.\relax }}{2}}
-\newlabel{table:delta_eval}{{I}{2}}
-\@writefile{toc}{\contentsline {section}{References}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected.\relax }}{3}}
-\newlabel{fig:time_valid}{{3}{3}}
+\bibstyle{IEEEtran}
+\bibdata{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
+\bibcite{scholkopf2001estimating}{1}
+\bibcite{Xiao2014}{2}
+\bibcite{Buonadonna2005}{3}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Gaussian kernel parameter optimization}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Training OCSVM and some results}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Discrimination boundaries with some $\delta $'s values. \relax }}{3}}
+\newlabel{fig:domain_boundary}{{2}{3}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces DR and FPR versus $\delta $.\relax }}{3}}
+\newlabel{table:delta_eval}{{I}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion and Future Work}{3}}
+\@writefile{toc}{\contentsline {section}{References}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected.\relax }}{4}}
+\newlabel{fig:time_valid}{{3}{4}}

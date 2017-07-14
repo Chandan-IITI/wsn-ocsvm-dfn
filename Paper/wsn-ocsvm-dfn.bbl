@@ -26,6 +26,14 @@ B.~Sch{\"o}lkopf, J.~C. Platt, J.~Shawe-Taylor, A.~J. Smola, and R.~C.
   Williamson, ``Estimating the support of a high-dimensional distribution,''
   \emph{Neural computation}, vol.~13, no.~7, pp. 1443--1471, 2001.
 
+\bibitem{Xiao2014}
+\BIBentryALTinterwordspacing
+Y.~Xiao, H.~Wang, L.~Zhang, and W.~Xu, ``{Two methods of selecting Gaussian
+  kernel parameters for one-class SVM and their application to fault
+  detection},'' \emph{Knowledge-Based Systems}, vol.~59, pp. 75--84, 2014.
+  [Online]. Available: \url{http://dx.doi.org/10.1016/j.knosys.2014.01.020}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Buonadonna2005}
 P.~Buonadonna, D.~Gay, J.~M. Hellerstein, W.~Hong, and S.~Madden, ``{TASK:
   Sensor network in a box},'' \emph{Proceedings of the Second European Workshop

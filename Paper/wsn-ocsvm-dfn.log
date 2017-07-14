@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  14 JUL 2017 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  15 JUL 2017 00:18
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -916,28 +916,33 @@ Overfull \hbox (23.73773pt too wide) in alignment at lines 107--114
 
 
 ]
+
+LaTeX Warning: Reference `eq:decision_fcn' on page 2 undefined on input line 19
+9.
+
 <Figs/ibrl_wsn.png, id=19, 903.375pt x 468.75125pt>
 File: Figs/ibrl_wsn.png Graphic file (type png)
  <use Figs/ibrl_wsn.png>
-Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 154.
+Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 213.
 (pdftex.def)             Requested size: 225.8432pt x 117.18752pt.
 
-<Python/data_description.pdf, id=20, 408.71112pt x 224.9357pt>
+[2 <./Figs/ibrl_wsn.png (PNG copy)>]
+<Python/data_description.pdf, id=25, 408.71112pt x 224.9357pt>
 File: Python/data_description.pdf Graphic file (type pdf)
 
 <use Python/data_description.pdf>
-Package pdftex.def Info: Python/data_description.pdf used on input line 161.
+Package pdftex.def Info: Python/data_description.pdf used on input line 228.
 (pdftex.def)             Requested size: 245.22856pt x 134.96245pt.
 
-<Python/time_validation.pdf, id=21, 627.9051pt x 917.3943pt>
+<Python/time_validation.pdf, id=26, 627.9051pt x 917.3943pt>
 File: Python/time_validation.pdf Graphic file (type pdf)
 
 <use Python/time_validation.pdf>
-Package pdftex.def Info: Python/time_validation.pdf used on input line 180.
+Package pdftex.def Info: Python/time_validation.pdf used on input line 247.
 (pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
 
 
-LaTeX Warning: Float too large for page by 3.77167pt on input line 183.
+LaTeX Warning: Float too large for page by 3.77167pt on input line 250.
 
 (wsn-ocsvm-dfn.bbl)
 
@@ -951,20 +956,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./Figs/ibrl_wsn.png (PNG copy)> <./Python/data_description.pdf>] [3 <./Pyth
-on/time_validation.pdf>] (wsn-ocsvm-dfn.aux)
+[3
+
+ <./Python/data_description.pdf>] [4 <./Python/time_validation.pdf>]
+(wsn-ocsvm-dfn.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24795 strings out of 493335
- 622559 string characters out of 3139236
- 776711 words of memory out of 10000000
- 27879 multiletter control sequences out of 15000+200000
- 43519 words of font info for 98 fonts, out of 3000000 for 9000
+ 24809 strings out of 493335
+ 622771 string characters out of 3139236
+ 785715 words of memory out of 10000000
+ 27892 multiletter control sequences out of 15000+200000
+ 44655 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,96p,730b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,96p,773b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fon
@@ -975,12 +982,13 @@ m/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (3 pages, 702961 bytes).
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wsn-ocsvm-dfn.pdf (4 pages, 719951 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
+ 202 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

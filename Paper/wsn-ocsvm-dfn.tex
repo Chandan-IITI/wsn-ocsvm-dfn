@@ -65,7 +65,7 @@ one-class support vector machines,  anomaly detection, wireless sensor networks,
 
 \section{Introduction}
 
-\section{One-Class Support Vector Machines and Preliminaries}\label{sec:OCSVM}
+\section{One-Class Support Vector Machines and Gaussian Kernel}\label{sec:OCSVM}
 
 In this section, we briefly recall one-class support vector machines (OCSVM) \cite{scholkopf2000support}. OCSVM is used to estimate the support of a distribution.
 Notationally, let us consider a data set $\{\mathbf{x}_1,\mathbf{x}_2,\ldots,\mathbf{x}_i, \ldots,\mathbf{x}_N\}$, 
@@ -141,13 +141,72 @@ can be recovered by exploiting that for any such $\alpha_i$, the corresponding p
 \rho=\langle\mathbf{w},\Phi(\mathbf{x}_i)\rangle=\sum_{j=1}^N\alpha_j k(\mathbf{x}_j, \mathbf{x}_i)
 \end{equation}
 
+\begin{align}
+k \left( \mathbf{x}_i, \mathbf{x}_j\right) = \exp \left( - \dfrac{\left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2} \right)
+\end{align}
+
+\begin{align}
+\left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 &= 2 -2 k \left( \mathbf{x}_i, \mathbf{x}_j\right) \nonumber \\
+&= 2 - 2 \exp \left( - \dfrac{\left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right)
+\end{align}
+
 \section{Description of Anomaly Detection Procedure for WSNs}
 
+\cite{Xiao2014}
 
+\begin{align}
+J (\sigma) &= \dfrac{1}{n} \sum _{i=1}^N \max_j \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 \nonumber \\
+&- \dfrac{1}{n} \sum _{i=1}^N \min_{j \ne i} \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 
+\end{align}
+
+\begin{align}
+J (\sigma) = \dfrac{2}{n} \sum _{i=1}^N \min_{j \ne i}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) - \dfrac{2}{n} \sum _{i=1}^N \max_{j}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) 
+\end{align}
+
+\begin{align}
+J (\sigma) &=\dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\min_{j \ne i} \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) \nonumber \\
+&- \dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\max_j \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) 
+\end{align}
+
+\begin{align}
+J (\sigma) &=\dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2} \right) \nonumber \\
+& - \dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) 
+\end{align}
+
+\begin{align}
+\nabla J  (\sigma) &= \dfrac{2}{n} \sum _{i=1}^N \exp \left( -\dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{\sigma^3} \nonumber \\
+& - \dfrac{2}{n} \sum _{i=1}^N \exp \left( -\dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{\sigma^3}
+\end{align}
+
+Gradient-based optimization
+
+No convexity is guarantee
+
+Time complexity of the DFN algorithm is $\mathcal{O}(N)$. 
+
+The whole procedure is summarized as below.
+\begin{algorithm}[H]
+\algnewcommand{\LeftComment}[1]{\Statex \(\triangleright\) #1}
+\renewcommand\algorithmicdo{}
+\renewcommand\algorithmicfor{For}
+\algtext*{EndFor}
+\algrenewcommand\alglinenumber[1]{\normalfont #1}
+\caption{(Anomaly detection procedure) Assume a training set $\{\mathbf{x}_k^{train}\}_k$, a threshold $\delta$ and kernel $\kappa (\cdot,\cdot)$ are given. This algorithm produces the decision function $f(\cdot)$ defined by the constant $D$, the support vectors $\mathbf{x}_i$ and corresponding Lagrange mutipliers $\alpha_i$.}
+\begin{algorithmic}[1]
+\LeftComment{Training phase:} 
+\State Set hyperparameters as
+\LeftComment{Decision phase:} 
+\State For a new sample $\mathbf{z}$, classify it according to \eqref{eq:decision_fcn}, then raise an alarm if $f(\mathbf{z})=1$.
+\end{algorithmic}
+\end{algorithm}
 
 \section{Illustrative Example}\label{sec:Illustrative}
 
 This section investigates the efficiency of anomaly detection algorithm over a real data set. The source code is freely available at \url{https://github.com/trinhvv/wsn-ocsvm-dfn}. All computation was performed on a platform with 2.6 GHz Intel(R) Core(TM) i7 and 16GB of RAM.
+
+\subsection{Data description}
+
+We consider a data set gathered from a WSN deployment at the Intel Berkeley Research Laboratory (IBRL) \cite{Buonadonna2005} with $54$ \emph{Mica2Dot} sensor nodes. Fig.~\ref{fig:sensor_map} shows the sensor deployment in the laboratory. The sensors collect five measurements: light in Lux, temperature in degrees celsius, humidity (temperature corrected relative humidity) ranging from $0\%$ to $100\%$, voltage in volts and network topology information in each $30$ second sampling period. Node $0$ is the gateway node while other nodes broadcast their data in multiple hops to the gateway node. During the $30$ day ($720$ hour) period between 28th Feb 2004 and 5th April 2004, the $54$ nodes collected about $2.3$ million readings.
 
 \begin{figure}[H]
 \centering
@@ -155,6 +214,14 @@ This section investigates the efficiency of anomaly detection algorithm over a r
 \caption{A map of sensors' location. (Source: \cite{Buonadonna2005})}
 \label{fig:sensor_map}
 \end{figure}
+
+In this paper we consider the IBRL data set obtained from $5$ close nodes, $1, 2, 33, 35, 37$. Also, only two features, namely temperature and humidity, are taken into account. The data during the first $10$ days period on March 2004 will be used as the training set. This training set contains more than $82000$ samples. 
+
+In order to evaluate performance of the proposed method, we also use a testing set in some concrete time intervals. Since the original data did not contain any labels as to which data is normal and anomalous, we visually identify and label them as normal and anomalous. This data set contains about $10000$ normal and $4000$ anomalous samples.
+
+\subsection{Gaussian kernel parameter optimization}
+
+\subsection{Training OCSVM and some results}
 
 \begin{figure}[H]
 \centering
@@ -181,6 +248,8 @@ DR [\%] & 100 & 100 & 100 & 100 \\
 \caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected.}
 \label{fig:time_valid}
 \end{figure*}
+
+\section{Conclusion and Future Work}
 
 \bibliographystyle{IEEEtran}
 \bibliography{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
