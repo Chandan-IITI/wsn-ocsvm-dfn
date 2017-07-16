@@ -189,7 +189,9 @@ and devise the gradient of $J (\sigma)$ with respect to $\sigma$ as:
 \end{align}
 This enables us to deploy the conventional gradient-based optimization method to find $\sigma^\star$ that maximizes $J(\sigma)$. However, it is notable that there is no guarantee on convexity of $J(\sigma)$. Nevertheless, this is unavoidable as optimizing parameters of kernel methods is generally known as non-convex. 
 
-After the Gaussian kernel parameter $\sigma$ is selected, the OCSVM can be trivially computed. However, for better robust detection, the discriminative threshold $\rho$ may need to be adjusted by a small quantity, namely $\delta$. Finally, the whole procedure is summarized as below.
+After the Gaussian kernel parameter $\sigma$ is selected, the OCSVM can be trivially computed. However, for better robust detection, the discriminative threshold $\rho$ may need to be adjusted by a small quantity, namely $\delta$. 
+
+Finally, for clarity, the whole procedure is summarized as below.
 \begin{algorithm}[H]
 \algnewcommand{\LeftComment}[1]{\Statex \(\triangleright\) #1}
 \renewcommand\algorithmicdo{}
@@ -201,13 +203,13 @@ After the Gaussian kernel parameter $\sigma$ is selected, the OCSVM can be trivi
 \LeftComment{Training phase:} 
 \State For each sample $\mathbf{x}_i$ of a given training set $\{ \mathbf{x}_i \}_{i=1}^N$, evaluating the quantities $\text{Near} \left( \mathbf{x}_i \right)$ and $\text{Far} \left( \mathbf{x}_i \right)$ in accordance to \eqref{eq:near_dist} and \eqref{eq:far_dist}.
 \State Set Gaussian kernel parameter as $\sigma^\star=\text{argmax} J(\sigma)$ whereas $J(\sigma)$ and $\nabla J  (\sigma)$ are defined in \eqref{eq:Js} and \eqref{eq:dJds}.
-\State Set the parameter $\nu \ll 1$ and solve \eqref{euq:ocsvmker} to obtain the decision function with adjusted discriminative threshold $\delta$ as:
+\State Set the parameter $0 < \nu \ll 1$ and solve \eqref{euq:ocsvmker} to obtain the decision function with adjusted discriminative threshold $\delta$ as:
 \begin{equation}
 \label{eq:decision_fcn_adjust}
 f(\mathbf{x})=\text{sgn}\left(\sum_{i=1}^N\alpha_i k(\mathbf{x}_i, \mathbf{x})- \rho + \delta \right)
 \end{equation}
 \LeftComment{Decision phase:} 
-\State For a new sample $\mathbf{z}$, classify it according to \eqref{eq:decision_fcn_adjust}, then raise an alarm if $f(\mathbf{z})=-1$.
+\State For a new sample $\mathbf{z}$, classify it according to \eqref{eq:decision_fcn_adjust}, then raise an alarm if $f(\mathbf{z})=1$.
 \end{algorithmic}
 \end{algorithm}
 
