@@ -152,19 +152,22 @@ This exhibits a positively proportional relation between $\left|\left| \phi \lef
 
 \section{Description of Anomaly Detection Procedure for WSNs}\label{sec:implementation}
 
+Since the Euclidean distance is used in this paper, the training set is suggested to be normalized, i.e. all features of the training samples $\mathbf{x}_i$ are assumed to be in the interval $\left[ 0, 1 \right]$.
+
 Imitiating \cite{Xiao2014}, in this paper, we maximize the following performance measure for training the OCSVM:
 \begin{align}
 J (\sigma) &= \dfrac{1}{n} \sum _{i=1}^N \max_j \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 \nonumber \\
 &- \dfrac{1}{n} \sum _{i=1}^N \min_{j \ne i} \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 
 \end{align}
 
-For Guassian kernel, this can be further simplified:
+For Gaussian kernel, this can be further simplified:
+\begin{subequations}
 \begin{align}
 J (\sigma) &= \dfrac{2}{n} \sum _{i=1}^N \min_{j \ne i}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) - \dfrac{2}{n} \sum _{i=1}^N \max_{j}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) \\
 &=\dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\min_{j \ne i} \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) \nonumber \\
 &- \dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\max_j \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) 
 \end{align}
-
+\end{subequations}
 Denote the nearest  and farthest neighbors distances respectively as 
 \begin{subequations}
 \begin{align}

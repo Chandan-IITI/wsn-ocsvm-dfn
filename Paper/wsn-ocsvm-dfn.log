@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  16 JUL 2017 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  16 JUL 2017 22:41
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -945,32 +945,32 @@ n
 File: Figs/ibrl_wsn.png Graphic file (type png)
 
 <use Figs/ibrl_wsn.png>
-Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 221.
+Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 224.
 (pdftex.def)             Requested size: 225.8432pt x 117.18752pt.
 
 <Python/cost_fcn.pdf, id=24, 356.01405pt x 223.60231pt>
 File: Python/cost_fcn.pdf Graphic file (type pdf)
 
 <use Python/cost_fcn.pdf>
-Package pdftex.def Info: Python/cost_fcn.pdf used on input line 233.
+Package pdftex.def Info: Python/cost_fcn.pdf used on input line 236.
 (pdftex.def)             Requested size: 213.61006pt x 134.16241pt.
  [3 <./Figs/ibrl_wsn.png (PNG copy)> <./Python/cost_fcn.pdf>] <Python/data_desc
 ription.pdf, id=46, 408.71112pt x 224.9357pt>
 File: Python/data_description.pdf Graphic file (type pdf)
 
 <use Python/data_description.pdf>
-Package pdftex.def Info: Python/data_description.pdf used on input line 245.
+Package pdftex.def Info: Python/data_description.pdf used on input line 248.
 (pdftex.def)             Requested size: 245.22856pt x 134.96245pt.
 
 <Python/time_validation.pdf, id=47, 627.9051pt x 917.3943pt>
 File: Python/time_validation.pdf Graphic file (type pdf)
 
 <use Python/time_validation.pdf>
-Package pdftex.def Info: Python/time_validation.pdf used on input line 253.
+Package pdftex.def Info: Python/time_validation.pdf used on input line 256.
 (pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
 
 
-LaTeX Warning: Float too large for page by 15.77167pt on input line 256.
+LaTeX Warning: Float too large for page by 15.77167pt on input line 259.
 
 (wsn-ocsvm-dfn.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 47--52
@@ -1000,7 +1000,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  24822 strings out of 493335
  622952 string characters out of 3139236
- 781717 words of memory out of 10000000
+ 782717 words of memory out of 10000000
  27904 multiletter control sequences out of 15000+200000
  44655 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1020,7 +1020,7 @@ ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (5 pages, 769193 bytes).
+Output written on wsn-ocsvm-dfn.pdf (5 pages, 769386 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
