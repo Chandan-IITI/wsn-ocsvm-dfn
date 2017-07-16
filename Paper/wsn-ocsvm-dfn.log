@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  16 JUL 2017 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  16 JUL 2017 23:29
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -896,47 +896,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{D:/Users/trinhvv-admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 67--76
+Underfull \hbox (badness 10000) in paragraph at lines 74--83
 []\OT1/ptm/m/n/10 OCSVM is used to es-ti-mate the sup-port of a
  []
 
 
-Underfull \hbox (badness 6510) in paragraph at lines 67--76
+Underfull \hbox (badness 6510) in paragraph at lines 74--83
 \OT1/ptm/m/n/10 dis-tri-bu-tion. No-ta-tion-ally, let us con-sider a data set
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 67--76
-\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x\OML/cmm/m/it/10 ; \OT1/cm
-r/bx/n/10 y\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 in-stead of the scalar prod-uct $
-\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 \OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x\OT1/cmr/
-m/n/10 )\OML/cmm/m/it/10 :\OT1/cmr/bx/n/10 \OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 y
-\OT1/cmr/m/n/10 ))$\OT1/ptm/m/n/10 . To
- []
-
-[1{D:/Users/trinhvv-admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 150--152
+Underfull \hbox (badness 2111) in paragraph at lines 157--159
 \OT1/ptm/m/n/10 This ex-hibits a pos-i-tively pro-por-tional re-la-tion be-twee
 n
  []
@@ -945,40 +941,50 @@ n
 File: Figs/ibrl_wsn.png Graphic file (type png)
 
 <use Figs/ibrl_wsn.png>
-Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 226.
+Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 233.
 (pdftex.def)             Requested size: 225.8432pt x 117.18752pt.
 
 <Python/cost_fcn.pdf, id=24, 356.01405pt x 223.60231pt>
 File: Python/cost_fcn.pdf Graphic file (type pdf)
 
 <use Python/cost_fcn.pdf>
-Package pdftex.def Info: Python/cost_fcn.pdf used on input line 238.
+Package pdftex.def Info: Python/cost_fcn.pdf used on input line 245.
 (pdftex.def)             Requested size: 213.61006pt x 134.16241pt.
- [3 <./Figs/ibrl_wsn.png (PNG copy)> <./Python/cost_fcn.pdf>] <Python/data_desc
-ription.pdf, id=46, 408.71112pt x 224.9357pt>
+ [3 <./Figs/ibrl_wsn.png (PNG copy)>]
+<Python/data_description.pdf, id=29, 408.71112pt x 224.9357pt>
 File: Python/data_description.pdf Graphic file (type pdf)
 
 <use Python/data_description.pdf>
-Package pdftex.def Info: Python/data_description.pdf used on input line 250.
+Package pdftex.def Info: Python/data_description.pdf used on input line 257.
 (pdftex.def)             Requested size: 245.22856pt x 134.96245pt.
 
-<Python/time_validation.pdf, id=47, 627.9051pt x 917.3943pt>
-File: Python/time_validation.pdf Graphic file (type pdf)
+<Python/time_validation0.pdf, id=30, 627.9051pt x 917.3943pt>
+File: Python/time_validation0.pdf Graphic file (type pdf)
 
-<use Python/time_validation.pdf>
-Package pdftex.def Info: Python/time_validation.pdf used on input line 258.
+<use Python/time_validation0.pdf>
+Package pdftex.def Info: Python/time_validation0.pdf used on input line 265.
 (pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
 
 
-LaTeX Warning: Float too large for page by 15.77167pt on input line 261.
+LaTeX Warning: Float too large for page by 15.77167pt on input line 268.
+
+<Python/time_validation.pdf, id=31, 627.9051pt x 917.3943pt>
+File: Python/time_validation.pdf Graphic file (type pdf)
+
+<use Python/time_validation.pdf>
+Package pdftex.def Info: Python/time_validation.pdf used on input line 271.
+(pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
+
+
+LaTeX Warning: Float too large for page by 15.77167pt on input line 274.
 
 (wsn-ocsvm-dfn.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 []\OT1/ptm/m/n/8 Sutharshan Ra-jasegarar, Christo-pher Leckie, and Marimuthu
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 47--52
+Underfull \hbox (badness 2744) in paragraph at lines 58--63
 \OT1/ptm/m/n/8 Palaniswami.  Hy-per-spher-i-cal clus-ter based dis-tributed ano
 maly
  []
@@ -995,16 +1001,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./Python/data_description.pdf>] [5 <./Python/time_validation.pdf>]
+[4 <./Python/cost_fcn.pdf> <./Python/data_description.pdf
+
+pdfTeX warning: pdflatex (file ./Python/data_description.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>] [5 <./Python/time_validation0.pdf>] [6 <./Python/time_validation.pdf>]
 (wsn-ocsvm-dfn.aux) ) 
 Here is how much of TeX's memory you used:
- 24822 strings out of 493335
- 622952 string characters out of 3139236
- 782717 words of memory out of 10000000
- 27904 multiletter control sequences out of 15000+200000
+ 24831 strings out of 493335
+ 623173 string characters out of 3139236
+ 784717 words of memory out of 10000000
+ 27912 multiletter control sequences out of 15000+200000
  44655 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,96p,1378b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,15n,96p,1575b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.e
 nc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
@@ -1020,9 +1030,9 @@ ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (5 pages, 769399 bytes).
+Output written on wsn-ocsvm-dfn.pdf (6 pages, 862651 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
+ 315 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

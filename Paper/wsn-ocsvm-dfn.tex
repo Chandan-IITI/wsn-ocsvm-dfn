@@ -56,9 +56,16 @@ one-class support vector machines,  anomaly detection, wireless sensor networks,
 
 WSNs are composed of a large number of sensor nodes that can communicate the information gathered from a monitored field through wireless links to monitor physical or environmental conditions, such as temperature, vibration, pressure, motion, etc. and to cooperatively pass their data throughout the network. WSNs are an emerging and very interesting technology applied to different applications including industrial processes, monitoring and control, machine health monitoring, healthcare applications and traffic control. WSNs will be an integral part of our lives, more so than the present-day personal computers (see \cite{Xie2011}). Due to the deployment of a large number of sensor nodes in uncontrolled or hostile environments, data measured and collected by WSNs is often  unreliable. This will affect the modeling and scientific reasonable inference. Thus, it is significant that the anomaly of sensor node is detected in order to obtain accurate information, therefore make effective decisions by information gatherered (see, for instance, \cite{sharma2010sensor}).\\
 
-Anomaly detection is a method to identify whether or not a metric is behaving differently than it has in the past, taking into account trends. This is implemented as one-class classification since only one class is represented in the training data. Several methods have been proposed to solve the one-class classification problem which can be classified into three main types the density estimation, the boundary methods and the reconstruction methods. In literature, a variety of anomaly detection techniques have been developed for certain application domains such as security systems, fraud detection and statistical process monitoring, for example, see \cite{ilonen2006gaussian}, \cite{clifton2011novelty}, \cite{Tran2015a}, \cite{Tran2015b}, \cite{Chandola2016}, \cite{Tran2016} and \cite{Tran2016c}. Recently, there have been growing interests in applying machine learning approaches for anomaly detection in WSNs. For further details see, for instance, \cite{sharma2010sensor}, \cite{Xie2011}, \cite{Rajasegarar2014}, \cite{Chandola2016}, and\cite{feng2017new}. Recently, \cite{shahid2015one} presented a detailed analysis of various formulations of OCSVM, like, hyper-plane, hyper-sphere, quarter-sphere and hyper-ellipsoidal to separate the normal data from anomalous data for wireless sensor networks in harsh environments.\\
+Anomaly detection is a method to identify whether or not a metric is behaving differently than it has in the past, taking into account trends. This is implemented as one-class classification since only one class is represented in the training data. Several methods have been proposed to solve the one-class classification problem which can be classified into three main types the density estimation, the boundary methods and the reconstruction methods. In literature, a variety of anomaly detection techniques have been developed for certain application domains such as security systems, fraud detection and statistical process monitoring, for example, see \cite{ilonen2006gaussian}, \cite{clifton2011novelty}, \cite{Tran2015a}, \cite{Tran2015b}, \cite{Chandola2016}, \cite{Tran2016} and \cite{Tran2016c}. Recently, there have been growing interests in applying machine learning approaches for anomaly detection in WSNs. For further details see, for instance, \cite{sharma2010sensor}, \cite{Xie2011}, \cite{Rajasegarar2014}, \cite{Chandola2016}, and\cite{feng2017new}. Since  \cite{scholkopf2001estimating} was the first to introduce the OCSVM; then, it has been widely used in various applications \cite{wang2004anomaly, rabaoui2008using, metzler2014detection}. Recently, \cite{shahid2015one} presented a detailed analysis of various formulations of OCSVM, like, hyper-plane, hyper-sphere, quarter-sphere and hyper-ellipsoidal to separate the normal data from anomalous data for wireless sensor networks in harsh environments. 
+It is important to note that the OCSVM approach is dependent on a set of user-tuned parameters which have a regularization 
+effect during training.  Since these parameters are not learnt, they may be chosen inadequatly 
+and lead to poor performance on a given data set \cite{rabaoui2008using}.\\
 
-In this contribution, we study a data driven algorithm based on OCSVM  for anomaly detection in WSNs. We test the performance of the algorithm on real data set obtained from a WSN deployment at the Intel Berkeley Research Laboratory. The remainder of the paper is organized as follows: in section \ref{sec:OCSVM}, some necessary background on OCSVM are introduced; in section \ref{sec:implementation}, the anomaly detection approach in WSNs is defined; section \ref{sec:Illustrative} presents an illustrative example, and finally, some concluding remarks and recommendations are made in section \ref{sec:concluding}.
+In this paper, we study a data driven hyperparameter optimization algorithm based on OCSVM for anomaly detection in WSNs. 
+We test the performance of the algorithm on real data set obtained from a WSN deployment at the Intel Berkeley 
+Research Laboratory. Our investigations will show that one effective method for improving  OCSVMs  consists  of  well  selecting  the  1-SVM
+kernel function, and thus improving sound class prediction. The remainder of the paper is organized as follows: 
+in section \ref{sec:OCSVM}, some necessary background on OCSVM are introduced; in section \ref{sec:implementation}, the anomaly detection approach in WSNs is defined; section \ref{sec:Illustrative} presents an illustrative example, and finally, some concluding remarks and recommendations are made in section \ref{sec:concluding}.
 
 \section{One-Class Support Vector Machines and Gaussian Kernel}\label{sec:OCSVM}
 
@@ -191,8 +198,8 @@ This enables us to deploy the conventional gradient-based optimization method to
 
 After the Gaussian kernel parameter $\sigma$ is selected, the OCSVM can be trivially computed. However, for better robust detection, the discriminative threshold $\rho$ may need to be adjusted by a small quantity, namely $\delta$. 
 
-Finally, for clarity, the whole procedure is summarized as below.
-\begin{algorithm}[H]
+Finally, for clarity, the whole procedure is summarized as in Alg.~1.
+\begin{algorithm}
 \algnewcommand{\LeftComment}[1]{\Statex \(\triangleright\) #1}
 \renewcommand\algorithmicdo{}
 \renewcommand\algorithmicfor{For}
@@ -252,15 +259,25 @@ Using the LIBSVM library \cite{chang2011}, the OCSVM is computed with $\nu=0.000
 \label{fig:domain_boundary}
 \end{figure}
 
-Fig.~\ref{fig:time_valid} depicts detection result on considered nodes over time with $\delta=0.02$. Although node $37$ exhibits several false alarms, such a fault detection is unavoidable and acceptable in practice.
+Figs.~\ref{fig:time_valid} and \ref{fig:time_valid0} depict detection result on considered nodes over time with $\delta=0.02$. It is evident that with appropriate modified discriminative threshold, the false alarm rate is reduced, thus improving robustness of the algorithm.
+\begin{figure*}
+\centering
+\includegraphics[scale=.7]{Python/time_validation0.pdf}
+\caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes without adjusted discriminative threshold, i.e. $\delta=0$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Nodes 33, 35 and 37 exhibit a number of false alarms.}
+\label{fig:time_valid0}
+\end{figure*}
 \begin{figure*}
 \centering
 \includegraphics[scale=.7]{Python/time_validation.pdf}
-\caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.}
+\caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes with adjusted discriminative threshold $\delta=0.02$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.}
 \label{fig:time_valid}
 \end{figure*}
 
 \section{Conclusion and Future Work}\label{sec:concluding}
+
+We presented an anomaly detection approach using OCSVM in WSNs without anomalies in the training set. Numerical result shown that the proposed approach achieved a high-level of detection accuracy and a low false alarm rate with an appropriate modified  discriminative threshold.  
+
+In the future, we would like to address the anomaly detection problem using autoencoder and control charts, targeting on time series data with uncertainties. We also focus on the detection ability of our proposed approach for large stream data.
 
 \bibliographystyle{plain}
 \bibliography{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}

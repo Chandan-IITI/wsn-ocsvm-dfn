@@ -58,7 +58,7 @@ save data_2d supportVector trainData boundaryData0 boundaryData1 boundaryData2 b
 %% Time Validation
 clear all;close all;clc;
 load ocsvm_model;
-ocsvmModel.rho=ocsvmModel.rho-2e-2;
+% ocsvmModel.rho=ocsvmModel.rho-2e-2;
 
 clear ibrlData;
 load ibrl_data;
@@ -68,7 +68,7 @@ ibrlData(ibrlData(:,1)~=3,:)=[];
 
 % 
 clear predictLabel moteData;
-for i=[1 2 33 35 37]
+for i=37
     moteData{i}=ibrlData(ibrlData(:,3)==i,[2 4 5]);
     predictLabel{i}=ocsvm_classify(ocsvmModel,normParam,moteData{i}(:,[2 3]));
     figure(i);clf;

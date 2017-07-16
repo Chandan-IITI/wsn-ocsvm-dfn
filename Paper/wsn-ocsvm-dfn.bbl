@@ -37,11 +37,22 @@ J.~Ilonen, P.~Paalanen, J.K. Kamarainen, and H.~Kalviainen.
 \newblock In {\em Pattern Recognition, 2006. ICPR 2006. 18th International
   Conference on}, volume~2, pages 577--580. IEEE, 2006.
 
+\bibitem{metzler2014detection}
+S.~Metzler and O.~V. Kalinina.
+\newblock Detection of atypical genes in virus families using a one-class svm.
+\newblock {\em BMC genomics}, 15(1):913, 2014.
+
 \bibitem{shahid2015one}
 I.~N.~Naqvi N.~Shahid and S.~B. Qaisar.
 \newblock One-class support vector machines: analysis of outlier detection for
   wireless sensor networks in harsh environments.
 \newblock {\em Artificial Intelligence Review}, 43(4):515--563, 2015.
+
+\bibitem{rabaoui2008using}
+A.~Rabaoui, M.~Davy, S.~Rossignol, and N.~Ellouze.
+\newblock Using one-class svms and wavelets for audio surveillance.
+\newblock {\em IEEE Transactions on information forensics and security},
+  3(4):763--775, 2008.
 
 \bibitem{Rajasegarar2014}
 Sutharshan Rajasegarar, Christopher Leckie, and Marimuthu Palaniswami.
@@ -90,6 +101,12 @@ K.P. Tran, P.~Castagliola, and G.~Celano.
   {R}ules {T}ype {C}ontrol {C}harts.
 \newblock {\em International Journal of Production Research}, 54(6):1670--1688,
   2016.
+
+\bibitem{wang2004anomaly}
+Y.~Wang, J.~Wong, and A.~Miner.
+\newblock Anomaly intrusion detection using one class svm.
+\newblock In {\em Information Assurance Workshop, 2004. Proceedings from the
+  Fifth Annual IEEE SMC}, pages 358--364. IEEE, 2004.
 
 \bibitem{Xiao2014}
 Yingchao Xiao, Huangang Wang, Lin Zhang, and Wenli Xu.
