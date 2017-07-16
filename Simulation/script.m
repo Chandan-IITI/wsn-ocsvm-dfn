@@ -142,5 +142,28 @@ DR=length(find(predictLabel==-1 & trueLabel==-1))/size(negativeData,1);
 FNR=1-DR;
 FPR=length(find(predictLabel==-1 & trueLabel==1))/size(positiveData,1);
 
+%%
+n=size(trainData,1);
+for i=1:n
+    X1=trainData;
+    X1(i,:)=[];
+    [~,D] = knnsearch(X1,trainData(i,:));
+    dmin(i)=D;
+    dmaxi=0;
+    for j=1:n
+        dmaxij=norm(trainData(i,:)-trainData(j,:));
+        if dmaxij>dmaxi
+           dmaxi=dmaxij;
+        end
+    end
+    dmax(i)=dmaxi;
+end
 
+s=(1e-5:1e-2:1)';
+f=zeros(length(s),1);
+for i=1:length(s)
+    [f(i),~]=obj_fcn(dmin,dmax,s(i));
+end
+
+save dfn_data Js s f;
 

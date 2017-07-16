@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  15 JUL 2017 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.12.1)  16 JUL 2017 22:32
 entering extended mode
 **./wsn-ocsvm-dfn.tex
 (wsn-ocsvm-dfn.tex
@@ -792,18 +792,18 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
  (wsn-ocsvm-dfn.aux)
 \openout1 = `wsn-ocsvm-dfn.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 -- Lines per column: 56 (exact).
 
@@ -869,82 +869,121 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 44.
+ on input line 33.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-LaTeX Warning: Citation `scholkopf2000support' on page 1 undefined on input lin
-e 70.
+Underfull \hbox (badness 1701) in paragraph at lines 57--58
+\OT1/ptm/m/n/10 that can com-mu-ni-cate the in-for-ma-tion gath-ered from a
+ []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+
+Underfull \hbox (badness 5260) in paragraph at lines 57--58
+\OT1/ptm/m/n/10 in-ter-est-ing tech-nol-ogy ap-plied to dif-fer-ent ap-pli-ca-t
+ions
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 57--58
+\OT1/ptm/m/n/10 in-clud-ing in-dus-trial pro-cesses, mon-i-tor-ing and con-trol
+,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 68.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 68.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (49.116pt too wide) in paragraph at lines 86--86
-[] 
+Underfull \hbox (badness 10000) in paragraph at lines 67--76
+[]\OT1/ptm/m/n/10 OCSVM is used to es-ti-mate the sup-port of a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
-
+Underfull \hbox (badness 6510) in paragraph at lines 67--76
+\OT1/ptm/m/n/10 dis-tri-bu-tion. No-ta-tion-ally, let us con-sider a data set
  []
 
 
-Overfull \hbox (80.29637pt too wide) detected at line 105
-\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 w\OML/cmm/m/it/10 ; \OML/cm
-m/b/it/10 \OML/cmm/m/it/10 ; \OML/cmm/b/it/10 \OML/cmm/m/it/10 ; \OML/cmm/b/i
-t/10 \OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ) = [] [][] + [] [] \OML/cmm/m/it/10 
-[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10  \OMS/cmsy/m/n/10   [] \OML/cmm/m/it/1
-0 []\OT1/cmr/m/n/10 ((\OT1/cmr/bx/n/10 w\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 (\O
-T1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10  \OT1
-/cmr/m/n/10 + \OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   [] \OML/
-cmm/m/it/10 [][]:
- []
-
-
-Overfull \hbox (23.73773pt too wide) in alignment at lines 107--114
- [][][] []
+Underfull \hbox (badness 1675) in paragraph at lines 67--76
+\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x\OML/cmm/m/it/10 ; \OT1/cm
+r/bx/n/10 y\OT1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 in-stead of the scalar prod-uct $
+\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 \OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 x\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 :\OT1/cmr/bx/n/10 \OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 y
+\OT1/cmr/m/n/10 ))$\OT1/ptm/m/n/10 . To
  []
 
 [1{D:/Users/trinhvv-admin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
-LaTeX Warning: Reference `eq:decision_fcn' on page 2 undefined on input line 19
-9.
+ []
 
-<Figs/ibrl_wsn.png, id=19, 903.375pt x 468.75125pt>
+
+Underfull \hbox (badness 2111) in paragraph at lines 150--152
+\OT1/ptm/m/n/10 This ex-hibits a pos-i-tively pro-por-tional re-la-tion be-twee
+n
+ []
+
+[2] <Figs/ibrl_wsn.png, id=23, 903.375pt x 468.75125pt>
 File: Figs/ibrl_wsn.png Graphic file (type png)
- <use Figs/ibrl_wsn.png>
-Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 213.
+
+<use Figs/ibrl_wsn.png>
+Package pdftex.def Info: Figs/ibrl_wsn.png used on input line 221.
 (pdftex.def)             Requested size: 225.8432pt x 117.18752pt.
 
-[2 <./Figs/ibrl_wsn.png (PNG copy)>]
-<Python/data_description.pdf, id=25, 408.71112pt x 224.9357pt>
+<Python/cost_fcn.pdf, id=24, 356.01405pt x 223.60231pt>
+File: Python/cost_fcn.pdf Graphic file (type pdf)
+
+<use Python/cost_fcn.pdf>
+Package pdftex.def Info: Python/cost_fcn.pdf used on input line 233.
+(pdftex.def)             Requested size: 213.61006pt x 134.16241pt.
+ [3 <./Figs/ibrl_wsn.png (PNG copy)> <./Python/cost_fcn.pdf>] <Python/data_desc
+ription.pdf, id=46, 408.71112pt x 224.9357pt>
 File: Python/data_description.pdf Graphic file (type pdf)
 
 <use Python/data_description.pdf>
-Package pdftex.def Info: Python/data_description.pdf used on input line 228.
+Package pdftex.def Info: Python/data_description.pdf used on input line 245.
 (pdftex.def)             Requested size: 245.22856pt x 134.96245pt.
 
-<Python/time_validation.pdf, id=26, 627.9051pt x 917.3943pt>
+<Python/time_validation.pdf, id=47, 627.9051pt x 917.3943pt>
 File: Python/time_validation.pdf Graphic file (type pdf)
 
 <use Python/time_validation.pdf>
-Package pdftex.def Info: Python/time_validation.pdf used on input line 247.
+Package pdftex.def Info: Python/time_validation.pdf used on input line 253.
 (pdftex.def)             Requested size: 439.53058pt x 642.17163pt.
 
 
-LaTeX Warning: Float too large for page by 3.77167pt on input line 250.
+LaTeX Warning: Float too large for page by 15.77167pt on input line 256.
 
-(wsn-ocsvm-dfn.bbl)
+(wsn-ocsvm-dfn.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
+[]\OT1/ptm/m/n/8 Sutharshan Ra-jasegarar, Christo-pher Leckie, and Marimuthu
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 47--52
+\OT1/ptm/m/n/8 Palaniswami.  Hy-per-spher-i-cal clus-ter based dis-tributed ano
+maly
+ []
+
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -956,39 +995,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
-
- <./Python/data_description.pdf>] [4 <./Python/time_validation.pdf>]
-(wsn-ocsvm-dfn.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[4 <./Python/data_description.pdf>] [5 <./Python/time_validation.pdf>]
+(wsn-ocsvm-dfn.aux) ) 
 Here is how much of TeX's memory you used:
- 24809 strings out of 493335
- 622771 string characters out of 3139236
- 785715 words of memory out of 10000000
- 27892 multiletter control sequences out of 15000+200000
+ 24822 strings out of 493335
+ 622952 string characters out of 3139236
+ 781717 words of memory out of 10000000
+ 27904 multiletter control sequences out of 15000+200000
  44655 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,96p,773b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
-es/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on wsn-ocsvm-dfn.pdf (4 pages, 719951 bytes).
+ 62i,15n,96p,1378b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.e
+nc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
+mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wsn-ocsvm-dfn.pdf (5 pages, 769193 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

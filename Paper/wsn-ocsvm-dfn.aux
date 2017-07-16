@@ -1,46 +1,82 @@
 \relax 
-\citation{scholkopf2000support}
+\citation{Xie2011}
+\citation{sharma2010sensor}
+\citation{ilonen2006gaussian}
+\citation{clifton2011novelty}
+\citation{Tran2015a}
+\citation{Tran2015b}
+\citation{Chandola2016}
+\citation{Tran2016}
+\citation{Tran2016c}
+\citation{sharma2010sensor}
+\citation{Xie2011}
+\citation{Rajasegarar2014}
+\citation{Chandola2016}
+\citation{feng2017new}
+\citation{shahid2015one}
 \citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}One-Class Support Vector Machines and Gaussian Kernel}{1}}
 \newlabel{sec:OCSVM}{{II}{1}}
-\newlabel{euq:ocsvm}{{1}{1}}
-\newlabel{euq:constraints}{{1b}{1}}
-\newlabel{equ:defosvm}{{2}{1}}
-\newlabel{equ:lagrangian}{{3}{1}}
-\newlabel{equ:supportvm}{{4}{1}}
-\newlabel{equ:alphai1}{{5}{1}}
-\newlabel{equ:alphai2}{{6}{1}}
-\newlabel{equ:defosvmker}{{8}{1}}
-\newlabel{equ:lagrangianalpha}{{9}{1}}
+\citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
 \citation{Xiao2014}
-\citation{Buonadonna2005}
-\citation{Buonadonna2005}
-\citation{Buonadonna2005}
-\newlabel{euq:ocsvmker}{{10}{2}}
-\newlabel{equ:rho}{{11}{2}}
+\newlabel{euq:ocsvm}{{1}{2}}
+\newlabel{euq:constraints}{{1b}{2}}
+\newlabel{equ:defosvm}{{2}{2}}
+\newlabel{equ:lagrangian}{{3}{2}}
+\newlabel{equ:supportvm}{{4}{2}}
+\newlabel{equ:alphai1}{{5}{2}}
+\newlabel{equ:alphai2}{{6}{2}}
+\newlabel{equ:defosvmker}{{7}{2}}
+\newlabel{equ:lagrangianalpha}{{8}{2}}
+\newlabel{euq:ocsvmker}{{9}{2}}
+\newlabel{equ:rho}{{10}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Description of Anomaly Detection Procedure for WSNs}{2}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces (Anomaly detection procedure) Assume a training set $\{\mathbf  {x}_k^{train}\}_k$, a threshold $\delta $ and kernel $\kappa (\cdot ,\cdot )$ are given. This algorithm produces the decision function $f(\cdot )$ defined by the constant $D$, the support vectors $\mathbf  {x}_i$ and corresponding Lagrange mutipliers $\alpha _i$.\relax }}{2}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Illustrative Example}{2}}
-\newlabel{sec:Illustrative}{{IV}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Data description}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A map of sensors' location. (Source: \cite  {Buonadonna2005})\relax }}{2}}
+\newlabel{sec:implementation}{{III}{2}}
+\citation{Buonadonna2005}
+\citation{Buonadonna2005}
+\citation{Buonadonna2005}
+\newlabel{eq:near_dist}{{16a}{3}}
+\newlabel{eq:far_dist}{{16b}{3}}
+\newlabel{eq:Js}{{17}{3}}
+\newlabel{eq:dJds}{{18}{3}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces (Anomaly detection)\relax }}{3}}
+\newlabel{eq:decision_fcn_adjust}{{19}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Illustrative Example}{3}}
+\newlabel{sec:Illustrative}{{IV}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Data description}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A map of sensors' location. (Source: \cite  {Buonadonna2005})\relax }}{3}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:sensor_map}{{1}{2}}
-\bibstyle{IEEEtran}
-\bibdata{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
-\bibcite{scholkopf2001estimating}{1}
-\bibcite{Xiao2014}{2}
-\bibcite{Buonadonna2005}{3}
+\newlabel{fig:sensor_map}{{1}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Gaussian kernel parameter optimization}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Training OCSVM and some results}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Discrimination boundaries with some $\delta $'s values. \relax }}{3}}
-\newlabel{fig:domain_boundary}{{2}{3}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces DR and FPR versus $\delta $.\relax }}{3}}
-\newlabel{table:delta_eval}{{I}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion and Future Work}{3}}
-\@writefile{toc}{\contentsline {section}{References}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected.\relax }}{4}}
-\newlabel{fig:time_valid}{{3}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Objective function $J(\sigma )$. \relax }}{3}}
+\newlabel{fig:cost_fcn}{{2}{3}}
+\citation{chang2011}
+\bibstyle{plain}
+\bibdata{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
+\bibcite{Buonadonna2005}{1}
+\bibcite{Chandola2016}{2}
+\bibcite{chang2011}{3}
+\bibcite{clifton2011novelty}{4}
+\bibcite{feng2017new}{5}
+\bibcite{ilonen2006gaussian}{6}
+\bibcite{shahid2015one}{7}
+\bibcite{Rajasegarar2014}{8}
+\bibcite{scholkopf2001estimating}{9}
+\bibcite{sharma2010sensor}{10}
+\bibcite{Tran2016c}{11}
+\bibcite{Tran2015b}{12}
+\bibcite{Tran2016}{13}
+\bibcite{Tran2015a}{14}
+\bibcite{Xiao2014}{15}
+\bibcite{Xie2011}{16}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Training OCSVM and some results}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Discrimination boundaries with some $\delta $'s values. \relax }}{4}}
+\newlabel{fig:domain_boundary}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion and Future Work}{4}}
+\newlabel{sec:concluding}{{V}{4}}
+\@writefile{toc}{\contentsline {section}{References}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.\relax }}{5}}
+\newlabel{fig:time_valid}{{4}{5}}

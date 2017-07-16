@@ -1,14 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: wsn-ocsvm-dfn.aux
-The style file: IEEEtran.bst
+The style file: plain.bst
 Database file #1: wsnbib.bib
 Database file #2: svmbib.bib
 Database file #3: ocsvmbib.bib
 Database file #4: ibrlbib.bib
 Database file #5: miscbib.bib
-Warning--I didn't find a database entry for "scholkopf2000support"
--- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
--- http://www.michaelshell.org/tex/ieeetran/bibtex/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-
-Done.
+Warning--can't use both author and editor fields in Chandola2016
 (There was 1 warning)
