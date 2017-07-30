@@ -19,8 +19,8 @@
 \citation{metzler2014detection}
 \citation{shahid2015one}
 \citation{rabaoui2008using}
-\citation{scholkopf2001estimating}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
 \citation{scholkopf2001estimating}
@@ -34,10 +34,10 @@
 \newlabel{equ:supportvm}{{4}{2}}
 \newlabel{equ:alphai1}{{5}{2}}
 \newlabel{equ:alphai2}{{6}{2}}
-\newlabel{equ:defosvmker}{{7}{2}}
-\newlabel{equ:lagrangianalpha}{{8}{2}}
-\newlabel{euq:ocsvmker}{{9}{2}}
-\newlabel{equ:rho}{{10}{2}}
+\newlabel{equ:lagrangianalpha}{{7}{2}}
+\newlabel{euq:ocsvmker}{{8}{2}}
+\newlabel{equ:rho}{{9}{2}}
+\newlabel{eq:ocsvm_fcn}{{10}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Description of Anomaly Detection Procedure for WSNs}{2}}
 \newlabel{sec:implementation}{{III}{2}}
 \citation{Buonadonna2005}
@@ -47,37 +47,22 @@
 \newlabel{eq:far_dist}{{15b}{3}}
 \newlabel{eq:Js}{{16}{3}}
 \newlabel{eq:dJds}{{17}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Illustrative Example}{3}}
-\newlabel{sec:Illustrative}{{IV}{3}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces (Anomaly detection)\relax }}{3}}
 \newlabel{eq:decision_fcn_adjust}{{18}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Illustrative Example}{3}}
+\newlabel{sec:Illustrative}{{IV}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Data description}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A map of sensors' location. (Source: \cite  {Buonadonna2005})\relax }}{3}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:sensor_map}{{1}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Gaussian kernel parameter optimization}{3}}
 \citation{chang2011}
-\bibstyle{plain}
+\bibstyle{IEEEtran}
 \bibdata{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
-\bibcite{Buonadonna2005}{1}
-\bibcite{Chandola2016}{2}
-\bibcite{chang2011}{3}
+\bibcite{Xie2011}{1}
+\bibcite{sharma2010sensor}{2}
+\bibcite{ilonen2006gaussian}{3}
 \bibcite{clifton2011novelty}{4}
-\bibcite{feng2017new}{5}
-\bibcite{ilonen2006gaussian}{6}
-\bibcite{metzler2014detection}{7}
-\bibcite{shahid2015one}{8}
-\bibcite{rabaoui2008using}{9}
-\bibcite{Rajasegarar2014}{10}
-\bibcite{scholkopf2001estimating}{11}
-\bibcite{sharma2010sensor}{12}
-\bibcite{Tran2016c}{13}
-\bibcite{Tran2015b}{14}
-\bibcite{Tran2016}{15}
-\bibcite{Tran2015a}{16}
-\bibcite{wang2004anomaly}{17}
-\bibcite{Xiao2014}{18}
-\bibcite{Xie2011}{19}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Gaussian kernel parameter optimization}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Objective function $J(\sigma )$. \relax }}{4}}
 \newlabel{fig:cost_fcn}{{2}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Training OCSVM and some results}{4}}
@@ -85,8 +70,23 @@
 \newlabel{fig:domain_boundary}{{3}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion and Future Work}{4}}
 \newlabel{sec:concluding}{{V}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes without adjusted discriminative threshold, i.e. $\delta =0$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Nodes 33, 35 and 37 exhibit a number of false alarms.\relax }}{4}}
+\newlabel{fig:time_valid0}{{4}{4}}
 \@writefile{toc}{\contentsline {section}{References}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes without adjusted discriminative threshold, i.e. $\delta =0$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Nodes 33, 35 and 37 exhibit a number of false alarms.\relax }}{5}}
-\newlabel{fig:time_valid0}{{4}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes with adjusted discriminative threshold $\delta =0.02$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.\relax }}{6}}
-\newlabel{fig:time_valid}{{5}{6}}
+\bibcite{Tran2015a}{5}
+\bibcite{Tran2015b}{6}
+\bibcite{Chandola2016}{7}
+\bibcite{Tran2016}{8}
+\bibcite{Tran2016c}{9}
+\bibcite{Rajasegarar2014}{10}
+\bibcite{feng2017new}{11}
+\bibcite{scholkopf2001estimating}{12}
+\bibcite{wang2004anomaly}{13}
+\bibcite{rabaoui2008using}{14}
+\bibcite{metzler2014detection}{15}
+\bibcite{shahid2015one}{16}
+\bibcite{Xiao2014}{17}
+\bibcite{Buonadonna2005}{18}
+\bibcite{chang2011}{19}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Anomaly detection validation upon whole IBRL data set on $5$ nodes with adjusted discriminative threshold $\delta =0.02$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.\relax }}{5}}
+\newlabel{fig:time_valid}{{5}{5}}

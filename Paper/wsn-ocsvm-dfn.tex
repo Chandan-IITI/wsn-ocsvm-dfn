@@ -32,18 +32,18 @@
 
 \begin{document}
 
-\title{Data Driven Hyperparameters Optimization of One-Class Support Vector Machines for Anomaly Detection in Wireless Sensor Networks}
+\title{Data Driven Hyperparameter Optimization of One-Class Support Vector Machines for Anomaly Detection in Wireless Sensor Networks}
 
 \author{\IEEEauthorblockN{Van Vuong~Trinh and Kim Phuc~Tran}
 \IEEEauthorblockA{Division of Artificial Intelligence,\\Faculty of Information Technology,\\ Dong A University, Danang, Vietnam\\Email: vanvuong.trinh@gmail.com, phuctk@donga.edu.vn}
 \and
 \IEEEauthorblockN{Truong Thu Huong}
-\IEEEauthorblockA{Department of Telecommunication Systems,\\School of Electronics and Telecommunications,\\Hanoi University of Science and Technology, Hanoi, Vietnam\\Email: huong.truongthu@hust.edu.vn}}
+\IEEEauthorblockA{Department of Communication Engineering,\\School of Electronics and Telecommunications,\\Hanoi University of Science and Technology, Hanoi, Vietnam\\Email: huong.truongthu@hust.edu.vn}}
 
 \maketitle
 
 \begin{abstract}
-One-class support vector machines (OCSVM) have been recently applied to detect anomalies in wireless sensor networks (WSNs). Typically, OCSVM is kernelized by radial bais functions (RBF, or Gausian kernel) whereas selecting hyperparameters is based upon availability of anomalies, which is rarely applicable in practice. This article investigates the application of OCSVM to detect anomalies in WSNs with data-driven hyperparameters optimization. Specifically, the information of the farthest and the nearest neighbors of each sample is used to construct the objective cost instead of labeling based metrics such as geometric mean accuracy (G-mean) or area under the receiver operating characteristic (AUROC). The efficiency of this method is illustrated over the IBRL dataset whereas the resulting estimated boundary as well as anomaly detection performance are comparable with existing methods. 
+One-class support vector machines (OCSVM) have been recently applied to detect anomalies in wireless sensor networks (WSNs). Typically, OCSVM is kernelized by radial bais functions (RBF, or Gausian kernel) whereas selecting Gaussian kernel hyperparameter is based upon availability of anomalies, which is rarely applicable in practice. This article investigates the application of OCSVM to detect anomalies in WSNs with data-driven hyperparameter optimization. Specifically, the information of the farthest and the nearest neighbors of each sample is used to construct the objective cost instead of labeling based metrics such as geometric mean accuracy (G-mean) or area under the receiver operating characteristic (AUROC). The efficiency of this method is illustrated over the IBRL dataset whereas the resulting estimated boundary as well as anomaly detection performance are comparable with existing methods. 
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -54,24 +54,25 @@ one-class support vector machines,  anomaly detection, wireless sensor networks,
 
 \section{Introduction}
 
-WSNs are composed of a large number of sensor nodes that can communicate the information gathered from a monitored field through wireless links to monitor physical or environmental conditions, such as temperature, vibration, pressure, motion, etc. and to cooperatively pass their data throughout the network. WSNs are an emerging and very interesting technology applied to different applications including industrial processes, monitoring and control, machine health monitoring, healthcare applications and traffic control. WSNs will be an integral part of our lives, more so than the present-day personal computers (see \cite{Xie2011}). Due to the deployment of a large number of sensor nodes in uncontrolled or hostile environments, data measured and collected by WSNs is often  unreliable. This will affect the modeling and scientific reasonable inference. Thus, it is significant that the anomaly of sensor node is detected in order to obtain accurate information, therefore make effective decisions by information gatherered (see, for instance, \cite{sharma2010sensor}).\\
+WSNs are composed of a large number of sensor nodes that can communicate the information gathered from a monitored field through wireless links to monitor physical or environmental conditions, such as temperature, vibration, pressure, motion, etc. and to cooperatively pass their data throughout the network. WSNs are an emerging and very interesting technology applied to different applications including industrial processes, monitoring and control, machine health monitoring, healthcare applications and traffic control. WSNs will be an integral part of our lives, more so than the present-day personal computers (see \cite{Xie2011}). Due to the deployment of a large number of sensor nodes in uncontrolled or hostile environments, data measured and collected by WSNs is often unreliable. This will affect the modeling and scientific reasonable inference. Thus, it is significant that the anomaly of sensor node is detected in order to obtain accurate information, therefore making effective decisions by information gatherered (see, for instance, \cite{sharma2010sensor}).\\
 
-Anomaly detection is a method to identify whether or not a metric is behaving differently than it has in the past, taking into account trends. This is implemented as one-class classification since only one class is represented in the training data. Several methods have been proposed to solve the one-class classification problem which can be classified into three main types the density estimation, the boundary methods and the reconstruction methods. In literature, a variety of anomaly detection techniques have been developed for certain application domains such as security systems, fraud detection and statistical process monitoring, for example, see \cite{ilonen2006gaussian}, \cite{clifton2011novelty}, \cite{Tran2015a}, \cite{Tran2015b}, \cite{Chandola2016}, \cite{Tran2016} and \cite{Tran2016c}. Recently, there have been growing interests in applying machine learning approaches for anomaly detection in WSNs. For further details see, for instance, \cite{sharma2010sensor}, \cite{Xie2011}, \cite{Rajasegarar2014}, \cite{Chandola2016}, and\cite{feng2017new}. Since  \cite{scholkopf2001estimating} was the first to introduce the OCSVM; then, it has been widely used in various applications \cite{wang2004anomaly, rabaoui2008using, metzler2014detection}. Recently, \cite{shahid2015one} presented a detailed analysis of various formulations of OCSVM, like, hyper-plane, hyper-sphere, quarter-sphere and hyper-ellipsoidal to separate the normal data from anomalous data for wireless sensor networks in harsh environments. 
+Anomaly detection is a method to identify whether or not a metric is behaving differently than it has in the past, taking into account trends. This is implemented as one-class classification since only one class is represented in the training data. Several methods have been proposed to solve the one-class classification problem which can be classified into three main types the density estimation, the boundary methods and the reconstruction methods. In literature, a variety of anomaly detection techniques have been developed for certain application domains such as security systems, network intrusion detection, fraud detection and statistical process monitoring, for example, see \cite{ilonen2006gaussian}, \cite{clifton2011novelty}, \cite{Tran2015a}, \cite{Tran2015b}, \cite{Chandola2016}, \cite{Tran2016} and \cite{Tran2016c}. Recently, there have been growing interests in applying machine learning approaches for anomaly detection in WSNs. For further details see, for instance, \cite{sharma2010sensor}, \cite{Xie2011}, \cite{Rajasegarar2014}, \cite{Chandola2016}, and\cite{feng2017new}. Since  \cite{scholkopf2001estimating} was the first to introduce the OCSVM; then, it has been widely used in various applications \cite{wang2004anomaly, rabaoui2008using, metzler2014detection}. Recently, \cite{shahid2015one} presented a detailed analysis of various formulations of OCSVM, like, hyper-plane, hyper-sphere, quarter-sphere and hyper-ellipsoidal to separate the normal data from anomalous data for wireless sensor networks in harsh environments. 
 It is important to note that the OCSVM approach is dependent on a set of user-tuned parameters which have a regularization 
 effect during training.  Since these parameters are not learnt, they may be chosen inadequatly 
-and lead to poor performance on a given data set \cite{rabaoui2008using}.\\
+and lead to poor performance on a given data set \cite{rabaoui2008using}. 
+Hyperparameter selection of the majority of existing OCSVM methods for anomaly 
+detection in WSNs is still an open problem, it is based upon availability of 
+anomalies, which is rarely applicable in practice.\\
 
-In this paper, we study a data driven hyperparameter optimization algorithm based on OCSVM for anomaly detection in WSNs. 
-We test the performance of the algorithm on real data set obtained from a WSN deployment at the Intel Berkeley 
-Research Laboratory. Our investigations will show that one effective method for improving  OCSVMs  consists  of  well  selecting  the  1-SVM
+To overcome this problem, we study a data driven hyperparameter optimization algorithm based on 
+OCSVM for anomaly detection in WSNs. We test the performance of the algorithm on real data set obtained from a WSN deployment at the Intel Berkeley 
+Research Laboratory. Our investigations will show that one effective method for improving  OCSVMs  consists  of  well  selecting  the  OCSVM
 kernel function, and thus improving sound class prediction. The remainder of the paper is organized as follows: 
 in section \ref{sec:OCSVM}, some necessary background on OCSVM are introduced; in section \ref{sec:implementation}, the anomaly detection approach in WSNs is defined; section \ref{sec:Illustrative} presents an illustrative example, and finally, some concluding remarks and recommendations are made in section \ref{sec:concluding}.
 
 \section{One-Class Support Vector Machines and Gaussian Kernel}\label{sec:OCSVM}
 
-In this section, we briefly review one-class support vector machines (OCSVM) \cite{scholkopf2001estimating} and the Gaussian kernel.
-
-OCSVM is used to estimate the support of a distribution.
+In this section, we briefly review one-class support vector machines (OCSVM) \cite{scholkopf2001estimating} and the Gaussian kernel. OCSVM is used to estimate the support of a distribution.
 Notationally, let us consider a data set $\{\mathbf{x}_1,\mathbf{x}_2,\ldots,\mathbf{x}_i, \ldots,\mathbf{x}_N\}$, 
 with each $\mathbf{x}_i\in \mathcal{R}^D$ belonging to a given class of interest (named target class). 
 The basic idea behind the OCSVM is to separate data from the origin by finding a hyperplane with maximum margin separation from
@@ -97,7 +98,7 @@ of examples of the training set mapped as positive by the
 decision function
 \begin{equation}
 \label{equ:defosvm}
-f(\mathbf{z})=\text{sgn}((\mathbf{w}.\Phi(\mathbf{x}))- \rho)
+f(\mathbf{x})=\text{sgn}((\mathbf{w}.\Phi(\mathbf{x}))- \rho)
 \end{equation}
 and having a small value of $\left|\left| \mathbf{w}\right|\right|$ to control model complexity.\\
 
@@ -118,33 +119,34 @@ and set the derivatives with respect to the primal variables $\mathbf{w}$, $\bol
 \frac{\partial L}{\partial \rho} & = 0: & \sum_{i=1}^N\alpha_i=1
 \end{eqnarray}
 
-In (\ref{equ:supportvm}), all patterns $\{\mathbf{x}_i:i\in[1,\ldots,N], \alpha_i>0\}$ are called Support Vectors. From (\ref{equ:supportvm}), using the kernel function, the decision function (\ref{equ:defosvm}) is transformed into a kernel expansion 
-\begin{equation}
-\label{equ:defosvmker}
-f(\mathbf{x})=\text{sgn}\left(\sum_{i=1}^N\alpha_i k(\mathbf{x}_i, \mathbf{x})- \rho\right)
-\end{equation}
 Substituting (\ref{equ:supportvm}), (\ref{equ:alphai1}) and (\ref{equ:alphai2}) into (\ref{equ:lagrangian}), and using the kernel function, we have 
 \begin{equation}
 \label{equ:lagrangianalpha}
-L=-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N \alpha_i\alpha_j k(\mathbf{x}_i, \mathbf{x}_j).
+L=-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N \alpha_i\alpha_j k(\mathbf{x}_i, \mathbf{x}_j)
 \end{equation}
-Then, we obtain the dual problem
+Then, the following dual optimization is considered:
 \begin{subequations}\label{euq:ocsvmker}
 \begin{align}
-\underset{
+\alpha_i^\star = \underset{
 	\begin{array}{c}
 		 \mathbf{\alpha}
 	\end{array}}{\text{Minimize }} & \sum_{i=1}^N\sum_{j=1}^N \alpha_i\alpha_j k(\mathbf{x}_i, \mathbf{x}_j)\\
 \text{Subject to } & \sum_{i=1}^N\alpha_i=1 ,  0\leq \alpha_i\leq \frac{1}{\nu N}, \quad \forall i=1\ldots N
 \end{align}
 \end{subequations}
-\cite{scholkopf2001estimating} shown that at the optimum, the two inequality constraints (\ref{euq:constraints}) 
-became equalities if $\alpha_i$ and $\beta_i$ are nonzero, which implies $0<\alpha_i<\frac{1}{\nu N}$. Thus, the value of $\rho$
-can be recovered by exploiting that for any such $\alpha_i$, the corresponding pattern $ \mathbf{x}_i$ satisfies
+Thus, the value of $\rho$
+can be recovered by exploiting that for any such $\alpha_i^\star$, the corresponding pattern $ \mathbf{x}_i$ satisfies
 \begin{equation}
 \label{equ:rho}
-\rho=\langle\mathbf{w},\Phi(\mathbf{x}_i)\rangle=\sum_{j=1}^N\alpha_j k(\mathbf{x}_j, \mathbf{x}_i)
+\rho=\langle\mathbf{w},\Phi(\mathbf{x}_i)\rangle=\sum_{j=1}^N\alpha_j^\star k(\mathbf{x}_j, \mathbf{x}_i)
 \end{equation}
+
+\cite{scholkopf2001estimating} shown that at the optimum, the two inequality constraints (\ref{euq:constraints}) do active if $0<\alpha_i^\star<\frac{1}{\nu N}$. Samples $\mathbf{x}_i$ that correspond to $0<\alpha_i^\star<\frac{1}{\nu N}$ are called \emph{support vectors}.  Let $N_\text{SV}$ being reserved for the number of support vectors. The discriminant function is thus reduced into:
+\begin{equation}
+\label{eq:ocsvm_fcn}
+f(\mathbf{x})=\text{sgn} \left( \sum_{i=1}^{N_\text{SV}} \alpha_i^\star k (\mathbf{x}, \mathbf{x}_i )- \rho \right)
+\end{equation}
+whereas time complexity of online evaluation is only $\mathcal{O} (N_\text{SV})$.
 
 The most commonly used kernel is the radial basis functions (RBF, or Gaussian) kernel:
 \begin{align}
@@ -161,18 +163,18 @@ This exhibits a positively proportional relation between $\left|\left| \phi \lef
 
 Since the Euclidean distance is used in this paper, the training set is suggested to be normalized, i.e. all features of the training samples $\mathbf{x}_i$ are assumed to be in the interval $\left[ 0, 1 \right]$.
 
-Imitiating \cite{Xiao2014}, in this paper, we maximize the following performance measure for training the OCSVM:
+Emulating \cite{Xiao2014}, in this paper, we maximize the following performance measure for training the OCSVM:
 \begin{align}
-J (\sigma) &= \dfrac{1}{n} \sum _{i=1}^N \max_j \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 \nonumber \\
-&- \dfrac{1}{n} \sum _{i=1}^N \min_{j \ne i} \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 
+J (\sigma) &= \dfrac{1}{N} \sum _{i=1}^N \max_j \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 \nonumber \\
+&- \dfrac{1}{N} \sum _{i=1}^N \min_{j \ne i} \left|\left| \phi \left( \mathbf{x}_i \right) - \phi \left( \mathbf{x}_j \right) \right|\right|^2 
 \end{align}
 
 For Gaussian kernel, this can be further simplified:
 \begin{subequations}
 \begin{align}
-J (\sigma) &= \dfrac{2}{n} \sum _{i=1}^N \min_{j \ne i}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) - \dfrac{2}{n} \sum _{i=1}^N \max_{j}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) \\
-&=\dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\min_{j \ne i} \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) \nonumber \\
-&- \dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\max_j \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) 
+J (\sigma) &= \dfrac{2}{N} \sum _{i=1}^N \min_{j \ne i}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) - \dfrac{2}{n} \sum _{i=1}^N \max_{j}  k \left( \mathbf{x}_i, \mathbf{x}_j\right) \\
+&=\dfrac{2}{N} \sum _{i=1}^N \exp \left( - \dfrac{\min_{j \ne i} \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) \nonumber \\
+&- \dfrac{2}{N} \sum _{i=1}^N \exp \left( - \dfrac{\max_j \left|\left| \mathbf{x}_i - \mathbf{x}_j \right|\right|^2}{2 \sigma^2}  \right) 
 \end{align}
 \end{subequations}
 Denote the nearest  and farthest neighbors distances respectively as 
@@ -186,13 +188,13 @@ Evidently, time complexity of exactly evaluating such distances is $\mathcal{O}(
 
 We hereafter arrive at:
 \begin{align}
-J (\sigma) &=\dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2} \right) \nonumber \\
-& - \dfrac{2}{n} \sum _{i=1}^N \exp \left( - \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \label{eq:Js}
+J (\sigma) &=\dfrac{2}{N} \sum _{i=1}^N \exp \left( - \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2} \right) \nonumber \\
+& - \dfrac{2}{N} \sum _{i=1}^N \exp \left( - \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \label{eq:Js}
 \end{align}
 and devise the gradient of $J (\sigma)$ with respect to $\sigma$ as:
 \begin{align}
-\nabla J  (\sigma) &= \dfrac{2}{n} \sum _{i=1}^N \exp \left( -\dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{\sigma^3} \nonumber \\
-& - \dfrac{2}{n} \sum _{i=1}^N \exp \left( -\dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{\sigma^3} \label{eq:dJds}
+\nabla J  (\sigma) &= \dfrac{2}{N} \sum _{i=1}^N \exp \left( -\dfrac{\text{Near} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Near} \left( \mathbf{x}_i \right)}{\sigma^3} \nonumber \\
+& - \dfrac{2}{N} \sum _{i=1}^N \exp \left( -\dfrac{\text{Far} \left( \mathbf{x}_i \right)}{2 \sigma^2}\right) \dfrac{\text{Far} \left( \mathbf{x}_i \right)}{\sigma^3} \label{eq:dJds}
 \end{align}
 This enables us to deploy the conventional gradient-based optimization method to find $\sigma^\star$ that maximizes $J(\sigma)$. However, it is notable that there is no guarantee on convexity of $J(\sigma)$. Nevertheless, this is unavoidable as optimizing parameters of kernel methods is generally known as non-convex. 
 
@@ -213,7 +215,7 @@ Finally, for clarity, the whole procedure is summarized as in Alg.~1.
 \State Set the parameter $0 < \nu \ll 1$ and solve \eqref{euq:ocsvmker} to obtain the decision function with adjusted discriminative threshold $\delta$ as:
 \begin{equation}
 \label{eq:decision_fcn_adjust}
-f(\mathbf{x})=\text{sgn}\left(\sum_{i=1}^N\alpha_i k(\mathbf{x}_i, \mathbf{x})- \rho + \delta \right)
+f(\mathbf{x})=\text{sgn} \left( \sum_{i=1}^{N_\text{SV}} \alpha_i^\star k (\mathbf{x}, \mathbf{x}_i )- \rho + \delta \right)
 \end{equation}
 \LeftComment{Decision phase:} 
 \State For a new sample $\mathbf{z}$, classify it according to \eqref{eq:decision_fcn_adjust}, then raise an alarm if $f(\mathbf{z})=1$.
@@ -259,19 +261,19 @@ Using the LIBSVM library \cite{chang2011}, the OCSVM is computed with $\nu=0.000
 \label{fig:domain_boundary}
 \end{figure}
 
-Figs.~\ref{fig:time_valid} and \ref{fig:time_valid0} depict detection result on considered nodes over time with $\delta=0.02$. It is evident that with appropriate modified discriminative threshold, the false alarm rate is reduced, thus improving robustness of the algorithm.
-\begin{figure*}
+Figs.~\ref{fig:time_valid0} and \ref{fig:time_valid} depict detection result on considered nodes over time with $\delta=0.02$. It is evident that with appropriate modified discriminative threshold, the false alarm rate is reduced, thus improving robustness of the algorithm.
+\begin{figure}
 \centering
-\includegraphics[scale=.7]{Python/time_validation0.pdf}
+\includegraphics[scale=.4]{Python/time_validation0.pdf}
 \caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes without adjusted discriminative threshold, i.e. $\delta=0$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Nodes 33, 35 and 37 exhibit a number of false alarms.}
 \label{fig:time_valid0}
-\end{figure*}
-\begin{figure*}
+\end{figure}
+\begin{figure}
 \centering
-\includegraphics[scale=.7]{Python/time_validation.pdf}
+\includegraphics[scale=.4]{Python/time_validation.pdf}
 \caption{Anomaly detection validation upon whole IBRL data set on $5$ nodes with adjusted discriminative threshold $\delta=0.02$. Almost apparent anomalies, i.e. temperature and humidity measurements that are too high or too low, are detected. Some false alarms or non-detected anomalous measures are observed, which is acceptable in practice.}
 \label{fig:time_valid}
-\end{figure*}
+\end{figure}
 
 \section{Conclusion and Future Work}\label{sec:concluding}
 
@@ -279,7 +281,7 @@ We presented an anomaly detection approach using OCSVM in WSNs without anomalies
 
 In the future, we would like to address the anomaly detection problem using autoencoder and control charts, targeting on time series data with uncertainties. We also focus on the detection ability of our proposed approach for large stream data.
 
-\bibliographystyle{plain}
+\bibliographystyle{IEEEtran}
 \bibliography{wsnbib,svmbib,ocsvmbib,ibrlbib,miscbib}
 
 \end{document}
